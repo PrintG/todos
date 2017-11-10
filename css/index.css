@@ -1,0 +1,316 @@
+@charset 'utf-8';
+
+html,body{
+	height: 100%;
+}
+body{
+	background-color: #f5f5f5;
+}
+body.loginBg{
+	background-color: #50a3a2;
+    background-image: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
+    background-image: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
+}
+/*==================== 登陆框界面部分 ====================*/
+.login{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 250px;
+	height: 200px;
+	margin: auto;
+	text-align: center;
+	font-weight: bold;
+}
+.login .login-title{
+	margin-bottom: 30px;
+	color: #fff;
+	font-size: 28px;
+	text-shadow: 1px 1px 2px #555;
+}
+.login .input{
+	position: relative;
+	width: 100%;
+	height: 40px;
+
+}
+.login .input input{
+	display: block;
+	width: 100%;
+	height: 100%;
+	margin-left: -1px;
+	border: 1px solid rgba(255,255,255,0.4);
+    background-color: rgba(255,255,255,0.2);
+	outline: none;
+	color: #fff;
+	text-align: center;
+}
+.login .input input:hover{
+	background-color: rgba(255,255,255,0.4);
+}    
+.login .input input:focus{
+	color: #53e3a6;
+	background-color: #fff;
+}
+.login .input .tip{
+	position: absolute;
+	top: 0;
+	z-index: -1;
+	width: 100%;
+	color: #fff;
+	line-height: 40px;
+}
+.login .input + .input input{
+	margin-top: 10px;
+}
+.login .input-submit input{
+	color: #53e3a6;
+	background-color: #fff;
+	cursor: pointer;
+}
+.login .input-submit input:hover{
+	background-color: rgba(255,255,255,0.90);
+}
+.login .avoid-login{
+	margin-top: 10px;
+	cursor: pointer;
+	color: #fff;
+	font-weight: normal;
+}
+.login .avoid-login>*{
+	display: inline-block;
+}
+.login .avoid-login i{
+	width: 16px;
+	height: 16px;
+	border: 1px solid #fff;
+	line-height: 16px;
+	font-weight: bold;
+	text-indent: -999999999px;
+}
+.login .avoid-login.select i{
+	text-indent: 0;
+}
+
+/*==================== 代办列表界面部分 ====================*/
+.main{
+	max-width: 765px;
+	margin: 50px auto;
+}
+.main.hide{
+	display: none;
+}
+.main .main-header{
+	font-size: 34px;
+	text-align: center;
+}
+.main .main-header .title span{
+	color: #216ba4;
+}
+.main .main-header .title a{
+	margin-left: 10px;
+	font-size: 15px;
+}
+.main .main-content{
+	position: relative;
+	width: 100%;
+	padding: 8px 8px 0px;
+	border: 1px solid #ddd;
+	background-color: #fff;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-box-shadow: 1px 1px 2px 1px #eee;
+	-moz-box-shadow: 1px 1px 2px 1px #eee;
+	box-shadow: 1px 1px 2px 1px #eee;
+}
+.main .main-content .main-content-header{
+	border-bottom: 3px solid #ddd;
+	margin-bottom: 20px;
+}
+.main .main-content .main-content-header>*{
+	float: left;
+	font-size: 20px;
+	line-height: 30px;
+}
+.main .main-content .main-content-header .iconfont{
+	padding-left: 10px;
+}
+.main .main-content .main-content-header .title{
+	color: #a9a9a9;
+	margin-left: 15px;
+}
+.main .main-content .main-content-header .add-task{
+	float: right;
+	font: normal bold 30px/1 "Microsoft YaHei";
+	cursor: pointer;
+	-webkit-text-shadow: 1px 1px 0px #888;
+	text-shadow: 1px 1px 0px #888;
+}
+.main .main-content .task-list li{
+	padding: 8px 0;
+}
+.main .main-content .task-list li+li{
+	border-top: 1px solid #ddd;
+}
+.main .main-content .task-list li>*{
+	float: left;
+	line-height: 14px;
+}
+.main .main-content .task-list li.no-task{
+	text-align: center;
+}
+.main .main-content .task-list li .task-select{
+	width: 14px;
+	height: 14px;
+	margin-top: 2px;
+	border: 1px solid #b8b8b8;
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+	font-weight: bold;
+	text-indent: -999999999px;
+	cursor: pointer;
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+}
+.main .main-content .task-list li.task-progress{
+	background-color: rgba(255,255,255,0.5);
+}
+.main .main-content .task-list li.task-progress.hide{
+	display: none;
+}
+.main .main-content .task-list li.task-progress .task-delete{
+	position: relative;
+	z-index: 6;
+	background-color: #fff;
+}
+.main .main-content .task-list li.completed .task-select{
+	border-color: #2c92ff;
+	background-color: #2c92ff;
+	text-indent: 0;
+}
+.main .main-content .task-list li .task-name{
+	max-width: 640px;
+	margin-left: 10px;
+	margin-top: 2px;
+	line-height: 18px;
+	cursor: pointer;
+	word-break: break-all;
+}
+.main .main-content .task-list li.completed .task-name{
+	text-decoration: line-through;
+}
+.main .main-content .task-list li .task-delete{
+	float: right;
+	margin-right: 15px;
+	padding: 2px 5px;
+	border: 1px solid #b8b8b8;
+	color: #000;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.main .main-content  .task-progress-bar{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 36px;
+	width: 0%;
+	background-color: rgba(0,0,255,0.15);
+	-webkit-transition: width 0.5s;
+	-moz-transition: width 0.5s;
+	transition: width 0.5s;
+}
+/*==================== 添加任务弹窗 ====================*/
+.propWin-add-task{
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 765px;
+	height: 100px;
+	margin: auto;
+	border: 1px solid #ccc;
+	background-color: rgba(255,255,255,0.8);
+	-webkit-box-shadow: 1px 1px 5px 1px #ccc;
+	-moz-box-shadow: 1px 1px 5px 1px #ccc;
+	box-shadow: 1px 1px 5px 1px #ccc;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+.propWin-add-task .wrap{
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 360px;
+	height: 30px;
+	margin: auto;
+}
+.propWin-add-task .wrap input{
+	outline: none;
+	-webkit-box-shadow: 0 0 1px 1px #ccc;
+	-moz-box-shadow: 0 0 1px 1px #ccc;
+	box-shadow: 0 0 1px 1px #ccc;
+}
+.propWin-add-task .wrap input[type="text"]{
+	width: 290px;
+	height: 30px;
+	padding-right: 10px;
+	border: none;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	text-indent: 0.5em;
+}
+.propWin-add-task .wrap input[type="submit"]{
+	width: 50px;
+	height: 30px;
+	border: none;
+	background-color: #fff;
+	margin-left:-8px;
+	cursor: pointer;
+	-webkit-border-radius: 0 3px 3px 0;
+	-moz-border-radius: 0 3px 3px 0;
+	border-radius: 0 3px 3px 0;
+}
+.propWin-add-task .close{
+	float: right;
+	font-size: 28px;
+	line-height: 20px;
+	cursor: pointer;
+}
+
+
+
+/*==================== 弹窗 ====================*/
+.propWin{
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 80%;
+	max-width: 500px;
+	height: 50px;
+	margin: auto;
+	border: 1px solid #000;
+	background-color: rgba(0,0,0,0.90);
+	color: #fff;
+	text-align: center;
+	font-size: 14px;
+	line-height: 50px;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}

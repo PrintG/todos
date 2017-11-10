@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Author" content="print">
+		<meta name="Keywords" content="标题">
+		<meta name="Description" content="描述">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<!-- <meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no,minimal-ui"> -->
+		<link rel="shortcut icon" type="images/x-icon" href="img/favicon.png">
+		<link rel="stylesheet" href="css/reset.css">  <!-- 样式初始化 -->
+		<link rel="stylesheet" href="css/index.css">  <!-- 当前页面css -->
+		<link rel="stylesheet" href="iconfont/iconfont.css">  <!-- 图标 -->
+		<!--[if lt IE 9]>
+			<script src="js/html5shiv.js"></script>
+			<div style="position:relative;z-index:99;width:100%;height:50px;background:#ffffe9;color:#1e5494;border-bottom:1px solid #e6e6c6;text-align:center;line-height:50px;font-size:12px;">您使用的浏览器版本过低，可能会影响到您浏览本网页，建议您升级您的浏览器。</div>
+		<![endif]-->
+		<title>todos</title>
+	</head>
+	<body class="loginBg" onselectstart="return false">
+		<!-- 登入界面 -->
+		<section class="login">
+			<h2 class="login-title">欢迎进入Todos</h2>
+			<div class="input input-username">
+				<input type="text" value="">
+				<p class="tip">请输入用户名</p>
+			</div>
+			<div class="input input-enter">
+				<input type="text" value="">
+				<p class="tip">确认用户名</p>
+			</div>
+			<div class="input input-submit">
+				<input type="submit" value="登陆">
+			</div>
+			<div class="avoid-login select">
+				<i class="iconfont icon-dui"></i>
+				7天内免登陆
+			</div>
+		</section>
+		
+		<!-- 用户界面 -->
+		<section class="main hide">
+			<header class="main-header">
+				<h2 class="title">My-Todos</h2>
+			</header>
+			<section class="main-content">
+				<header class="main-content-header clearfix">
+					<i class="iconfont icon-renwu"></i>
+					<h3 class="title">What's your task?</h3>
+					<i class="add-task" title="添加任务">+</i>
+				</header>
+				<ul class="task-list">
+					<li class="no-task">
+						暂时没有任务,请点击右上角+号来添加任务
+					</li>
+					<!-- <li class="task-item completed">
+						<i class="iconfont icon-dui task-select"></i>
+						<p class="task-name">任务名</p>
+						<a href="javascript:;" class="task-delete">删除</a>
+					</li>
+					<li class="task-item">
+						<i class="iconfont icon-dui task-select"></i>
+						<p class="task-name">任务名</p>
+						<a href="javascript:;" class="task-delete">删除</a>
+					</li> -->
+					<li class="task-progress hide">
+						<p class="task-name">任务进度： 0/0 (0%)</p>
+						<a href="javascript:;" class="task-delete">清空已完成</a>
+					</li>
+				</ul>
+				<div class="task-progress-bar"></div>
+			</section>
+		</section>
+		<!-- 添加任务弹窗 -->
+		<div class="propWin-add-task" onselectstart="null">
+			<div class="wrap">
+				<input type="text" placeholder="请输入代表事件名称">
+				<input type="submit" value="添加">
+			</div>
+			<i class="close">×</i>
+		</div>
+
+
+		<!-- 弹窗 -->
+		<div class="propWin">
+			登陆失败！
+		</div>
+
+		<script src="js/jquery.3.2.1.min.js"></script>
+		<script src="js/json2.js"></script>
+		<script src="js/index.js"></script>
+	</body>
+</html>
